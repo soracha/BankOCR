@@ -3,7 +3,7 @@ package BankOCR;
 sub tranform_num {
 
 	my $input    = shift @_;
-	my @pattern  = ("   ", "|   ", " _ ", "  |", "|_ ", "| |", " _|", "|_|");
+	my @pattern  = ("   ", "|  ", " _ ", "  |", "|_ ", "| |", " _|", "|_|");
 	my @code 	 = ("257", "033", "264", "266", "073", "246", "247", "233", "277", "276" );
 	
 	my @arrInput =  $input =~/(.{3})/g;
