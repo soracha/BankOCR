@@ -32,10 +32,17 @@ my $str4 =
 "  |  |  |  |  |  |  |  |  |" .
 "                           " ;
 
+my $str5 =
+" _  _  _  _  _  _  _  _  _ " .
+"|_ |_ |_ |_ |_ |_ |_ |_ |_ " .
+" _| _| _| _| _| _| _| _| _|" .
+"                           " ;
+
 is(BankOCR::tranform_num($str0), "000000000", "0x9 => 000000000") ;
 is(BankOCR::tranform_num($str1), "111111111", "1x9 => 111111111") ;
 is(BankOCR::tranform_num($str2), "222222222", "2x9 => 222222222") ;
 is(BankOCR::tranform_num($str3), "333333333", "3x9 => 333333333") ;
 is(BankOCR::tranform_num($str4), "444444444", "4x9 => 444444444") ;
+is(BankOCR::tranform_num($str5), "555555555", "5x9 => 555555555") ;
 
 done_testing();
