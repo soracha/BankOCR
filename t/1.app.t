@@ -20,8 +20,15 @@ my $str2 =
 "|_ |_ |_ |_ |_ |_ |_ |_ |_ " .
 "                           " ;
 
+my $str3 =
+" _  _  _  _  _  _  _  _  _ " .
+" _| _| _| _| _| _| _| _| _|" .
+" _| _| _| _| _| _| _| _| _|" .
+"                           " ;
+
 is(BankOCR::tranform_num($str0), "000000000", "0x9 => 000000000") ;
 is(BankOCR::tranform_num($str1), "111111111", "1x9 => 111111111") ;
 is(BankOCR::tranform_num($str2), "222222222", "2x9 => 222222222") ;
+is(BankOCR::tranform_num($str3), "333333333", "3x9 => 333333333") ;
 
 done_testing();
