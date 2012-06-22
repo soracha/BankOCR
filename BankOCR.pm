@@ -34,6 +34,11 @@ sub tranform_num {
 			   " _| _| _| _| _| _| _| _| _|" .
 			   "                           " ;
 
+	my $str6 = " _  _  _  _  _  _  _  _  _ " .
+			   "|_ |_ |_ |_ |_ |_ |_ |_ |_ " .
+			   "|_||_||_||_||_||_||_||_||_|" .
+			   "                           " ;
+
 	if ( $input eq $str0 ) {
 		return "000000000" ;
 	}
@@ -56,6 +61,11 @@ sub tranform_num {
 
 	elsif ( $input eq $str5 ) {
 		return "555555555" ;
+	}
+
+	elsif ( $input eq $str6)
+	{
+		return "666666666" ;
 	}
 
 	return "Not number" ;
