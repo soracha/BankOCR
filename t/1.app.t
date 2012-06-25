@@ -87,4 +87,6 @@ is(BankOCR::tranform_num($str9) , "999999999", "9x9   => 999999999") ;
 is(BankOCR::tranform_num($str10), "397840152", "str10 => 397840152") ;
 is(BankOCR::tranform_num($str11), "834519829", "str11 => 834519829") ;
 
+is(BankOCR::isValid("000000000"), true, "'000000000' => true") ;
+
 done_testing();
