@@ -45,9 +45,9 @@ sub tranform_num {
 
 sub isValid {
 
-    my @input = shift @_;
-    my @digits = ();
-    
+    my $input = shift @_;
+    my @digits =  $input =~/(.)/g;
+
     #checksum calculation:
     my $result = ($digits[0] +
                     (2*$digits[1]) +
