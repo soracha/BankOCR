@@ -1,3 +1,6 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
 use Test::More;
 
 use_ok('BankOCR');
@@ -87,8 +90,8 @@ is(BankOCR::tranform_num($str9) , "999999999", "9x9   => 999999999") ;
 is(BankOCR::tranform_num($str10), "397840152", "str10 => 397840152") ;
 is(BankOCR::tranform_num($str11), "834519829", "str11 => 834519829") ;
 
-is(BankOCR::isValid("000000000"), true,  "'000000000' => true" ) ;
-is(BankOCR::isValid("111111111"), false, "'111111111' => false") ;
-is(BankOCR::isValid("943456789"), true,  "'943456789' => true" ) ;
+is(BankOCR::isValid("000000000"), "true",  "'000000000' => true" ) ;
+is(BankOCR::isValid("111111111"), "false", "'111111111' => false") ;
+is(BankOCR::isValid("943456789"), "true",  "'943456789' => true" ) ;
 
 done_testing();
