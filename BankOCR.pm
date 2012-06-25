@@ -44,7 +44,23 @@ sub tranform_num {
 }
 
 sub isValid {
-    return true;
+
+    my @input = shift @_;
+    my @digits = ();
+    
+    #checksum calculation:
+    my $result = ($digits[0] +
+                    (2*$digits[1]) +
+                    (3*$digits[2]) +
+                    (4*$digits[3]) +
+                    (5*$digits[4]) +
+                    (6*$digits[5]) +
+                    (7*$digits[6]) +
+                    (8*$digits[7]) +
+                    (9*$digits[8])) % 11;
+
+    ($result == 0) ? return true : return false ;
+
 }
 
 1;
