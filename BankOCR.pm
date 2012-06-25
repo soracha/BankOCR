@@ -1,8 +1,6 @@
-#!/usr/bin/env perl
+package BankOCR;
 use strict;
 use warnings;
-
-package BankOCR;
 
 sub tranform_num {
     
@@ -49,7 +47,7 @@ sub tranform_num {
 
 sub isValid {
 
-    my $input = shift @_;
+    my $input  = shift @_;
     my @digits =  $input =~/(.)/g;
 
     #checksum calculation:
