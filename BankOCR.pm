@@ -44,7 +44,7 @@ sub tranform_num {
 }
 
 sub isValid {
-	return "test";
+	return true;
 }
 
 1;
