@@ -68,6 +68,12 @@ my $str10 =
 " _| _|  ||_|  ||_|  | _||_ " .
 "                           " ;
 
+my $str11 =
+" _  _     _     _  _  _  _ " .
+"|_| _||_||_   ||_||_| _||_|" .
+"|_| _|  | _|  | _||_||_  _|" .
+"                           " ;
+
 is(BankOCR::tranform_num($str0) , "000000000", "0x9   => 000000000") ;
 is(BankOCR::tranform_num($str1) , "111111111", "1x9   => 111111111") ;
 is(BankOCR::tranform_num($str2) , "222222222", "2x9   => 222222222") ;
@@ -79,5 +85,6 @@ is(BankOCR::tranform_num($str7) , "777777777", "7x9   => 777777777") ;
 is(BankOCR::tranform_num($str8) , "888888888", "8x9   => 888888888") ;
 is(BankOCR::tranform_num($str9) , "999999999", "9x9   => 999999999") ;
 is(BankOCR::tranform_num($str10), "397840152", "str10 => 397840152") ;
+is(BankOCR::tranform_num($str11), "834519829", "str11 => 834519829") ;
 
 done_testing();
