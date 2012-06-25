@@ -1,3 +1,7 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+
 package BankOCR;
 
 sub tranform_num {
@@ -5,7 +9,7 @@ sub tranform_num {
     my $input     = shift @_;
     my @pattern   = ("   ", "|  ", " _ ", "  |", "|_ ", "| |", " _|", "|_|");
     my @code 	  = ("257", "033", "264", "266", "073", "246", "247", "233", "277", "276" );
-    my $positions = ();
+    my @positions = ();
     my $result    = "";
     my @arrInput  = $input =~/(.{3})/g;
 
@@ -35,7 +39,7 @@ sub tranform_num {
         }
     }
 
-    foreach $position ( @positions ) {
+    foreach my $position ( @positions ) {
         $result .= $position;
     }
 
@@ -59,7 +63,7 @@ sub isValid {
                     (8*$digits[7]) +
                     (9*$digits[8])) % 11;
 
-    ($result == 0) ? return true : return false ;
+    ($result == 0) ? return "true" : return "false" ;
 
 }
 
